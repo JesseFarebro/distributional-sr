@@ -1,0 +1,71 @@
+[project]
+name = "distributional-sr"
+authors = [
+    { name = "Jesse Farebrother", email = "jessefarebro@gmail.com" },
+    { name = "Harley Wiltzer", email = "harley.wiltzer@mail.mcgill.ca" },
+]
+dependencies = [
+    "matplotlib",
+    "seaborn",
+    "tyro",
+    "orbax-checkpoint==0.5.2",
+    "optax",
+    "flax",
+    "tqdm",
+    "aim>=3.17.5",
+    "einops",
+    "numpy",
+    "clu",
+    "dm-env",
+    "rich",
+    "pdbpp>=0.10.3",
+    "setuptools>=68.0.0",
+    "fancyflags>=1.1",
+    "wrapt>=1.14.1",
+    "more-itertools>=9.1.0",
+    "gymnasium>=0.28.1",
+    "jax[cuda11_pip]>=0.4.13",
+    "fiddle>=0.2.7",
+    "portpicker>=1.5.2",
+    "tf2jax>=0.3.4",
+    "debugpy>=1.6.7",
+    "wandb>=0.15.8",
+    "jaxtyping>=0.2.21",
+    "shimmy[dm-control]>=1.2.1",
+    "etils[epath]>=1.4.1",
+    "tensorstore==0.1.52",
+]
+requires-python = "==3.10.*"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.optional-dependencies]
+profiling = ["py-spy>=0.3.14"]
+dataset-collection = ["sbx-rl>=0.7.0", "tensorflow>=2.12.0"]
+plotting = ["ipykernel>=6.26.0", "ipython>=8.16.1"]
+
+[tool.ruff]
+preview = true
+line-length = 120
+# Don't fix unused imports
+unfixable = ["F401"]
+# Ignore unused variables
+ignore = ["F841", "E402"]
+
+[tool.pdm.options]
+add = ["--no-self"]
+install = ["--no-self"]
+sync = ["--no-self"]
+
+[tool.pdm.scripts]
+aim = "aim up"
+
+[[tool.pdm.source]]
+name = "jax"
+url = "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
+verify_ssl = true
+type = "find_links"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"

@@ -1,0 +1,17 @@
+{
+    "files.watcherExclude": {
+        "datasets/**": true,
+        "logdir/**": true,
+        "wandb/**": true,
+        ".venv/**": true,
+    },
+    "files.exclude": {
+        "wandb/**": true,
+        ".venv/**": true,
+    },
+    "search.exclude": {
+        ".venv/**": true,
+        "pdm.lock": true
+    },
+    "python.analysis.diagnosticMode": "workspace"
+}
