@@ -1,6 +1,6 @@
 # Distributional Successor Measure
 
-This repository contains the reference implementation of the Distributional Success Measure presented in:
+This repository contains the reference implementation of the Distributional Successor Measure presented in:
 
 **[A Distributional Analogue to the Successor Representation](https://arxiv.org/abs/2402.08530)**
 
@@ -48,6 +48,7 @@ You can switch how the experiment is logged either using Weights & Biases or Aim
 To run the local Aim server you can simply run: `pdm run aim` and then navigate to the provided URL.
 
 ## Citation
+If you build on our work or find it useful, please cite it using the following bibtex.
 
 ```bibtex
 @article{wiltzer2024dsm,
