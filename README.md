@@ -1,6 +1,6 @@
 # Distributional Successor Measure
 
-This repository contains the reference implementation of the Distributional Successor Measure presented in:
+This repository contains the reference implementation of the Distributional Successor Measure, presented as a spotlight at ICML 2024.
 
 **[A Distributional Analogue to the Successor Representation](https://arxiv.org/abs/2402.08530)**
 
@@ -51,11 +51,11 @@ To run the local Aim server you can simply run: `pdm run aim` and then navigate 
 If you build on our work or find it useful, please cite it using the following bibtex.
 
 ```bibtex
-@article{wiltzer2024dsm,
+@inproceedings{wiltzer2024dsm,
     title={A Distributional Analogue to the Successor Representation},
     author={Harley Wiltzer and Jesse Farebrother and Arthur Gretton and Yunhao Tang and Andr\'e Barreto and Will Dabney and Marc G Bellemare and Mark Rowland},
+    booktitle = {International Conference on Machine Learning (ICML)}, 
     year={2024},
-    journal={arXiv preprint arXiv:2402.08530},
 }
 ```
 
